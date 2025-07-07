@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haoua Traoré - Portfolio</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --accent: #e74c3c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        h2 {
+            color: var(--secondary);
+            margin: 1.5rem 0;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 0.5rem;
+        }
+        
+        h3 {
+            color: var(--primary);
+            margin: 1rem 0;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--light);
+            opacity: 0.9;
+        }
+        
+        nav {
+            background-color: var(--dark);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav li {
+            margin: 0 1rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: var(--secondary);
+        }
+        
+        section {
+            padding: 2rem 0;
+        }
+        
+        .about {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .experience-item, .education-item {
+            margin-bottom: 2rem;
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .date {
+            color: var(--secondary);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        ul.skills {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        ul.skills li {
+            background-color: var(--secondary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .skill-category {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .contact-info a {
+            color: var(--secondary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        .language-switcher {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        
+        .language-btn {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .language-btn:hover {
+            background-color: #2980b9;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 0.5rem 0;
+            }
+            
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .language-switcher {
+                position: static;
+                text-align: center;
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="language-switcher">
+                <button class="language-btn" id="translateBtn">EN</button>
+            </div>
+            <h1 data-fr="Haouaou Traoré" data-en="Haouaou Traore">Haouaou Traoré</h1>
+            <p class="subtitle" data-fr="Développeuse Full Stack" data-en="Full Stack Developer ">Développeuse Full Stack </p>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#about" data-fr="À propos" data-en="About">À propos</a></li>
+            <li><a href="#experience" data-fr="Expérience" data-en="Experience">Expérience</a></li>
+            <li><a href="#education" data-fr="Formation" data-en="Education">Formation</a></li>
+            <li><a href="#skills" data-fr="Compétences" data-en="Skills">Compétences</a></li>
+            <li><a href="#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section id="about">
+            <h2 data-fr="À propos" data-en="About">À propos</h2>
+            <div class="about">
+                <p data-fr="Développeuse Full Stack passionnée avec une solide formation en Ingénierie Logicielle et une expérience variée en développement web, mobile et administration réseau. Polyvalente et rigoureuse, je combine compétences techniques et sens du relationnel pour mener à bien des projets complexes." 
+                   data-en="Passionate Full Stack Developer with a solid background in Software Engineering and diverse experience in web development, mobile applications and network administration. Versatile and rigorous, I combine technical skills and interpersonal skills to successfully carry out complex projects.">
+                    Développeuse Full Stack passionnée avec une solide formation en Ingénierie Logicielle et une expérience variée en développement web, mobile et administration réseau. Polyvalente et rigoureuse, je combine compétences techniques et sens du relationnel pour mener à bien des projets complexes.
+                </p>
+                <ul class="skills">
+                    <li data-fr="Rigueur" data-en="Rigor">Rigueur</li>
+                    <li data-fr="Autonomie" data-en="Autonomy">Autonomie</li>
+                    <li data-fr="Persévérance" data-en="Perseverance">Persévérance</li>
+                    <li data-fr="Créativité" data-en="Creativity">Créativité</li>
+                    <li data-fr="Professionnalisme" data-en="Professionalism">Professionnalisme</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="experience">
+            <h2 data-fr="Expérience Professionnelle" data-en="Professional Experience">Expérience Professionnelle</h2>
+            
+            <div class="experience-item">
+                <h3 data-fr="Développeuse Full Stack - Mali-Développeur Sarl" data-en="Full Stack Developer - Mali-Développeur Sarl">Développeuse Full Stack - Mali-Développeur Sarl</h3>
+                <p class="date" data-fr="Mai 2024 - Novembre 2024 (Contrat à durée déterminée (CDD), à temps partiel)" data-en="May 2024 – November 2024 (Fixed-term contract, part-time)">Mai 2024 - Novembre 2024 (Contrat à durée déterminée (CDD), à temps partiel)</p>
+                <ul>
+                    <li data-fr="Gestion de clients et administration des réseaux sociaux" data-en="Client management and social media administration">Gestion de clients et administration des réseaux sociaux</li>
+                    <li data-fr="Formatrice en développement d'applications mobiles avec Flutter/Dart" data-en="Trainer in mobile application development with Flutter/Dart">Formatrice en développement d'applications mobiles avec Flutter/Dart</li>
+                    <li data-fr="Formatrice en technologies web : HTML, CSS, JavaScript, PHP" data-en="Trainer in web technologies: HTML, CSS, JavaScript, PHP">Formatrice en technologies web : HTML, CSS, JavaScript, PHP</li>
+                    <li data-fr="Formatrice en compétences bureautiques avancées (Excel VBA)" data-en="Trainer in advanced office skills (Excel VBA)">Formatrice en compétences bureautiques avancées (Excel VBA)</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <h3 data-fr="Chargée Excécutive - Mali-Développeur Sarl" data-en="Executive Officer - Mali-Développeur Sarl">Chargée Excécutive - Mali-Développeur Sarl</h3>
+                <p class="date">Janvier 2023 - Septembre 2023</p>
+                <ul>
+                    <li data-fr="Gestion de clients et administration des réseaux sociaux" data-en="Client management and social media administration">Gestion de clients et administration des réseaux sociaux</li>
+                    <li data-fr="Conception graphique et design" data-en="Graphic design and conception">Conception graphique et design</li>
+                    <li data-fr="Marketing digital" data-en="Digital marketing">Marketing digital</li>
+                    <li data-fr="Création de sites web et développement d'applications mobiles" data-en="Website creation and mobile app development">Création de sites web et développement d'applications mobiles</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <h3 data-fr="Stage - Orange Mali (Département ingénierie réseau et fibre optique)" data-en="Internship - Orange Mali (Network and Fiber Optic Engineering Department)">Stage - Orange Mali (Département ingénierie réseau et fibre optique)</h3>
+                <p class="date" data-fr="Septembre 2022 - Octobre 2022 (1 mois)" data-en="September 2022 – October 2022 (1 month)">Septembre 2022 - Octobre 2022 (1 mois)</p>
+                <ul>
+                    <li data-fr="Étude du projet d'installation de fibre optique" data-en="Study of the optical fiber installation project">Étude du projet d'installation de fibre optique</li>
+                    <li data-fr="Étude de terrain et déploiement réseau" data-en="Field study and network deployment">Étude de terrain et déploiement réseau</li>
+                    <li data-fr="Installations locales avec les prestataires" data-en="Local installations with service providers">Installations locales avec les prestataires</li>
+                    <li data-fr="Activation Wi-Fi chez les clients" data-en="Wi-Fi activation at customers' premises">Activation Wi-Fi chez les clients</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <h3 data-fr="Stage - AGETIC (Division infrastructure et équipements)" data-en="Internship - AGETIC (Infrastructure and Equipment Division)">Stage - AGETIC (Division infrastructure et équipements)</h3>
+                <p class="date" data-fr="Mai 2022 - Juillet 2022 (2 mois)" data-en="May 2022 – July 2022 (2 months)">Mai 2022 - Juillet 2022 (2 mois)</p>
+                <ul>
+                    <li data-fr="Maintenance des ordinateurs de bureau" data-en="Office computer maintenance">Maintenance des ordinateurs de bureau</li>
+                    <li data-fr="Dépannage et réparation" data-en="Troubleshooting & Repair">Dépannage et réparation</li>
+                    <li data-fr="Installation de systèmes d'exploitation et logiciels" data-en="Operating system and software installation">Installation de systèmes d'exploitation et logiciels</li>
+                    <li data-fr="Maintenance des serveurs" data-en="Server maintenance">Maintenance des serveurs</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="education">
+            <h2 data-fr="Formation" data-en="Education">Formation</h2>
+            
+            <div class="education-item">
+                <h3 data-fr="Master en Ingénierie Logicielle et Systèmes d'Information Informatisés" data-en="Master's Degree in Software Engineering and Computerized Information Systems">Master en Ingénierie Logicielle et Systèmes d'Information Informatisés</h3>
+                <p class="date">Septembre 2023 - Présent</p>
+                <p data-fr="Faculté des Sciences et Techniques de Bamako" data-en="Faculty of Science and Technology of Bamako">Faculté des Sciences et Techniques de Bamako</p>
+            </div>
+            
+            <div class="education-item">
+                <h3 data-fr="Formation en Gouvernance de l'Internet" data-en="Training on Internet Governance">Formation en Gouvernance de l'Internet</h3>
+                <p class="date">Décembre 2023</p>
+                <p data-fr="ISOC (Internet Society) et MaliSIG (Malian School of Internet Governance)" data-en="ISOC (Internet Society) and MaliSIG (Malian School of Internet Governance)">ISOC (Internet Society) et MaliSIG (Malian School of Internet Governance)</p>
+            </div>
+            
+            <div class="education-item">
+                <h3 data-fr="Formation en Ingénierie Informatique" data-en="Training in Computer Engineering">Formation en Ingénierie Informatique</h3>
+                <p class="date">2020 - 2024</p>
+                <p data-fr="Expert-Lab Technologie, Bamako" data-en="Expert-Lab Technology, Bamako">Expert-Lab Technologie, Bamako</p>
+            </div>
+            
+            <div class="education-item">
+                <h3 data-fr="Licence en Maintenance Informatique et Réseaux" data-en="Bachelor's degree in Computer Maintenance and Networks">Licence en Maintenance Informatique et Réseaux</h3>
+                <p class="date">2018 - 2022</p>
+                <p data-fr="Faculté des Sciences et Techniques de Bamako" data-en="Faculty of Science and Technology of Bamako">Faculté des Sciences et Techniques de Bamako</p>
+            </div>
+        </section>
+        
+        <section id="skills">
+            <h2 data-fr="Compétences Techniques" data-en="Technical Skills">Compétences Techniques</h2>
+            
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3 data-fr="Langages de Programmation" data-en="Programming Languages">Langages de Programmation</h3>
+                    <ul>
+                        <li>Java</li>
+                        <li>JavaScript</li>
+                        <li data-fr="Dart" data-en="Dart">Dart</li>
+                        <li>PHP</li>
+                        <li>SQL/PLSQL</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 data-fr="Frameworks & Outils" data-en="Frameworks & Tools">Frameworks & Outils</h3>
+                    <ul>
+                        <li>Spring Boot</li>
+                        <li>Angular</li>
+                        <li>Flutter</li>
+                        <li>Eclipse</li>
+                        <li>Visual Studio Code</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 data-fr="Technologies Web" data-en="Web Technologies">Technologies Web</h3>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>PHP</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 data-fr="Bases de Données" data-en="Databases">Bases de Données</h3>
+                    <ul>
+                        <li>MySQL</li>
+                        <li>MongoDB</li>
+                        <li>Oracle SQL</li>
+                        <li>XAMPP/WAMP</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 data-fr="Langues" data-en="Languages">Langues</h3>
+                    <ul>
+                        <li data-fr="Français - Très bon" data-en="French - Very good">Français - Très bon</li>
+                        <li data-fr="Anglais - Bien" data-en="English - Well">Anglais - Bien</li>
+                        <li data-fr="Bambara - Assez bon" data-en="Bambara - Pretty good">Bambara - Assez bon</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 data-fr="Centres d'Intérêt" data-en="Hobbies">Centres d'Intérêt</h3>
+                    <ul>
+                        <li data-fr="Exploration" data-en="Exploration">Exploration</li>
+                        <li data-fr="Musique" data-en="Music">Musique</li>
+                        <li data-fr="Arts Martiaux" data-en="Martial Arts">Arts Martiaux</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2 data-fr="Contact" data-en="Contact">Contact</h2>
+            <div class="about">
+                <div class="contact-info">
+                    <a href="mailto:traorehaoua1968@gmail.com">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        traorehaoua1968@gmail.com
+                    </a>
+                    <a href="mailto:traorehaouaou2001@gmail.com">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        traorehaouaou2001@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/haouaou" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                        www.linkedin.com/in/haouaou
+                    </a>
+                    <a href="#">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span data-fr="Daoudabougou, Bamako, Mali" data-en="Daoudabougou, Bamako, Mali">Daoudabougou, Bamako, Mali</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p data-fr="&copy; 2024 Haouaou Traoré - Tous droits réservés" data-en="&copy; 2024 Haouaou Traore - All rights reserved">&copy; 2024 Haouaou Traoré - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('translateBtn').addEventListener('click', function() {
+            const isFrench = this.textContent === 'EN';
+            const elements = document.querySelectorAll('[data-fr], [data-en]');
+            
+            elements.forEach(element => {
+                if (isFrench) {
+                    // Traduire en anglais
+                    if (element.getAttribute('data-en')) {
+                        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                            element.value = element.getAttribute('data-en');
+                        } else {
+                            element.textContent = element.getAttribute('data-en');
+                        }
+                    }
+                } else {
+                    // Revenir en français
+                    if (element.getAttribute('data-fr')) {
+                        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                            element.value = element.getAttribute('data-fr');
+                        } else {
+                            element.textContent = element.getAttribute('data-fr');
+                        }
+                    }
+                }
+            });
+
+            // Mettre à jour le texte du bouton
+            this.textContent = isFrench ? 'FR' : 'EN';
+            
+            // Traduire les dates
+            const dates = document.querySelectorAll('.date');
+            dates.forEach(date => {
+                const text = date.textContent;
+                if (isFrench) {
+                    date.textContent = text
+                        .replace('Janvier', 'January')
+                        .replace('Février', 'February')
+                        .replace('Mars', 'March')
+                        .replace('Avril', 'April')
+                        .replace('Mai', 'May')
+                        .replace('Juin', 'June')
+                        .replace('Juillet', 'July')
+                        .replace('Août', 'August')
+                        .replace('Septembre', 'September')
+                        .replace('Octobre', 'October')
+                        .replace('Novembre', 'November')
+                        .replace('Décembre', 'December')
+                        .replace('Présent', 'Present');
+                } else {
+                    date.textContent = text
+                        .replace('January', 'Janvier')
+                        .replace('February', 'Février')
+                        .replace('March', 'Mars')
+                        .replace('April', 'Avril')
+                        .replace('May', 'Mai')
+                        .replace('June', 'Juin')
+                        .replace('July', 'Juillet')
+                        .replace('August', 'Août')
+                        .replace('September', 'Septembre')
+                        .replace('October', 'Octobre')
+                        .replace('November', 'Novembre')
+                        .replace('December', 'Décembre')
+                        .replace('Present', 'Présent');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

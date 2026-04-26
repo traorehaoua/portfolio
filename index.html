@@ -224,11 +224,9 @@
 <body>
     <header>
         <div class="container">
-            <div class="language-switcher">
-                <button class="language-btn" id="translateBtn">EN</button>
-            </div>
+            
             <h1 data-fr="Haouaou Traoré" data-en="Haouaou Traore">Haouaou Traoré</h1>
-            <p class="subtitle" data-fr="Développeuse Full Stack" data-en="Full Stack Developer ">Développeuse Full Stack </p>
+            <p class="subtitle" data-fr="Ingénieur Réseau et Logiciel (NetDevOps)" data-en="Network & Software Engineer (NetDevOps)">Ingénieur Réseau et Logiciel (NetDevOps) </p>
         </div>
     </header>
     
@@ -240,30 +238,73 @@
             <li><a href="#skills" data-fr="Compétences" data-en="Skills">Compétences</a></li>
             <li><a href="#achievements" data-fr="Réalisations" data-en="Achievements">Réalisations</a></li>
             <li><a href="#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
+            <li class="language-switcher">
+                <button class="language-btn" id="translateBtn">ENGLISH</button>
+            </li>
         </ul>
     </nav>
     
     <div class="container">
-        <section id="about">
-            <h2 data-fr="À propos" data-en="About">À propos</h2>
-            <div class="about">
-                <p data-fr="Développeuse Full Stack passionnée avec une solide formation en Ingénierie Logicielle et une expérience variée en développement web, mobile et administration réseau. Polyvalente et rigoureuse, je combine compétences techniques et sens du relationnel pour mener à bien des projets complexes." 
-                   data-en="Passionate Full Stack Developer with a solid background in Software Engineering and diverse experience in web development, mobile applications and network administration. Versatile and rigorous, I combine technical skills and interpersonal skills to successfully carry out complex projects.">
-                    Développeuse Full Stack passionnée avec une solide formation en Ingénierie Logicielle et une expérience variée en développement web, mobile et administration réseau. Polyvalente et rigoureuse, je combine compétences techniques et sens du relationnel pour mener à bien des projets complexes.
-                </p>
-                <ul class="skills">
-                    <li data-fr="Rigueur" data-en="Rigor">Rigueur</li>
-                    <li data-fr="Autonomie" data-en="Autonomy">Autonomie</li>
-                    <li data-fr="Persévérance" data-en="Perseverance">Persévérance</li>
-                    <li data-fr="Créativité" data-en="Creativity">Créativité</li>
-                    <li data-fr="Professionnalisme" data-en="Professionalism">Professionnalisme</li>
-                </ul>
-            </div>
-        </section>
+       <section id="about">
+                <h2 data-fr="À propos" data-en="About">À propos</h2>
+                <div class="about">
+                    <p data-fr="Dotée de solides compétences en systèmes réseaux et en ingénierie logicielle, mon parcours académique et professionnel m’a permis de développer une grande polyvalence, un sens aigu de la rigueur ainsi qu’une forte détermination dans la réalisation de mes projets." 
+                       data-en="With strong skills in network systems and software engineering, my academic and professional background has allowed me to develop strong versatility, a keen sense of rigor, and great determination in delivering my projects.">
+                        Dotée de solides compétences en systèmes réseaux et en ingénierie logicielle, mon parcours académique et professionnel m’a permis de développer une grande polyvalence, un sens aigu de la rigueur ainsi qu’une forte détermination dans la réalisation de mes projets.
+                    </p>
+            
+                    <ul class="skills">
+                        <li data-fr="Rigueur" data-en="Rigor">Rigueur</li>
+                        <li data-fr="Autonomie" data-en="Autonomy">Autonomie</li>
+                        <li data-fr="Persévérance" data-en="Perseverance">Persévérance</li>
+                        <li data-fr="Créativité" data-en="Creativity">Créativité</li>
+                        <li data-fr="Professionnalisme" data-en="Professionalism">Professionnalisme</li>
+                    </ul>
+                </div>
+            </section>
         
         <section id="experience">
             <h2 data-fr="Expérience Professionnelle" data-en="Professional Experience">Expérience Professionnelle</h2>
+            <div class="experience-item">
+                <h3 data-fr="Développeuse Web & Mobile - Faculté des Sciences et Techniques de Bamako (FST) – Cellule Informatique" 
+                    data-en="Web & Mobile Developer - Faculty of Science and Technology of Bamako (FST) – IT Unit">
+                    Développeuse Web & Mobile - Faculté des Sciences et Techniques de Bamako (FST) – Cellule Informatique
+                </h3>
             
+                <p class="date" 
+                   data-fr="Mai 2025 – Présent" 
+                   data-en="May 2025 – Present">
+                   Mai 2025 – Présent
+                </p>
+            
+                <ul>
+                    <li data-fr="Développement d’interfaces utilisateur pour plusieurs modules (Tableau de bord, Gestion des évaluations, Administration, Supports de cours) avec Angular, PrimeNG et TypeScript"
+                        data-en="Developed user interfaces for multiple modules (Dashboard, Evaluation Management, Administration, Course Materials) using Angular, PrimeNG, and TypeScript">
+                        Développement d’interfaces utilisateur pour plusieurs modules (Tableau de bord, Gestion des évaluations, Administration, Supports de cours) avec Angular, PrimeNG et TypeScript
+                    </li>
+            
+                    <li data-fr="Implémentation de systèmes d’authentification sécurisés (connexion et inscription)"
+                        data-en="Implemented secure authentication systems (login and registration)">
+                        Implémentation de systèmes d’authentification sécurisés (connexion et inscription)
+                    </li>
+            
+                    <li data-fr="Gestion des rôles utilisateurs et du contrôle d’accès (AuthGuards et Interceptors Angular)"
+                        data-en="Managed user roles and access control (Angular AuthGuards and Interceptors)">
+                        Gestion des rôles utilisateurs et du contrôle d’accès (AuthGuards et Interceptors Angular)
+                    </li>
+            
+                    <li data-fr="Publication de l’application mobile de la Faculté sur Google Play Store"
+                        data-en="Published the Faculty mobile application on Google Play Store">
+                        Publication de l’application mobile de la Faculté sur Google Play Store
+                    </li>
+            
+                    <li>
+                        <a href="https://play.google.com/store/apps/details?id=com.fst.facultyplus&pcampaignid=web_share" target="_blank">
+                            Voir l’application
+                        </a>
+                    </li>
+                </ul>
+            </div>
             <div class="experience-item">
                 <h3 data-fr="Développeuse Full Stack - Mali-Développeur Sarl" data-en="Full Stack Developer - Mali-Développeur Sarl">Développeuse Full Stack - Mali-Développeur Sarl</h3>
                 <p class="date" data-fr="Mai 2024 - Novembre 2024 (Contrat à durée déterminée (CDD), à temps partiel)" data-en="May 2024 – November 2024 (Fixed-term contract, part-time)">Mai 2024 - Novembre 2024 (Contrat à durée déterminée (CDD), à temps partiel)</p>
@@ -287,15 +328,44 @@
             </div>
             
             <div class="experience-item">
-                <h3 data-fr="Stage - Orange Mali (Département ingénierie réseau et fibre optique)" data-en="Internship - Orange Mali (Network and Fiber Optic Engineering Department)">Stage - Orange Mali (Département ingénierie réseau et fibre optique)</h3>
-                <p class="date" data-fr="Septembre 2022 - Octobre 2022 (1 mois)" data-en="September 2022 – October 2022 (1 month)">Septembre 2022 - Octobre 2022 (1 mois)</p>
-                <ul>
-                    <li data-fr="Étude du projet d'installation de fibre optique" data-en="Study of the optical fiber installation project">Étude du projet d'installation de fibre optique</li>
-                    <li data-fr="Étude de terrain et déploiement réseau" data-en="Field study and network deployment">Étude de terrain et déploiement réseau</li>
-                    <li data-fr="Installations locales avec les prestataires" data-en="Local installations with service providers">Installations locales avec les prestataires</li>
-                    <li data-fr="Activation Wi-Fi chez les clients" data-en="Wi-Fi activation at customers' premises">Activation Wi-Fi chez les clients</li>
-                </ul>
-            </div>
+    <h3 data-fr="Stage - Orange Mali (Département ingénierie réseau et fibre optique)" 
+        data-en="Internship - Orange Mali (Network and Fiber Optic Engineering Department)">
+        Stage - Orange Mali (Département ingénierie réseau et fibre optique)
+    </h3>
+
+    <p class="date" 
+       data-fr="Septembre 2022 - Octobre 2022 (1 mois)" 
+       data-en="September 2022 – October 2022 (1 month)">
+       Septembre 2022 - Octobre 2022 (1 mois)
+    </p>
+
+    <ul>
+        <li data-fr="Étude des projets de déploiement de la fibre optique"
+            data-en="Studied fiber optic deployment projects">
+            Étude des projets de déploiement de la fibre optique
+        </li>
+
+        <li data-fr="Réalisation d’études de terrain et participation au déploiement réseau (câblage, zones de couverture)"
+            data-en="Conducted field studies and participated in network deployment (cabling, coverage areas)">
+            Réalisation d’études de terrain et participation au déploiement réseau (câblage, zones de couverture)
+        </li>
+
+        <li data-fr="Participation aux installations locales en collaboration avec les prestataires de services"
+            data-en="Participated in local installations with service providers">
+            Participation aux installations locales en collaboration avec les prestataires de services
+        </li>
+
+        <li data-fr="Installation et activation des réseaux Wi-Fi chez les clients"
+            data-en="Installed and activated Wi-Fi networks at customers' premises">
+            Installation et activation des réseaux Wi-Fi chez les clients
+        </li>
+
+        <li data-fr="Suivi des opérations réalisées et rédaction de rapports d’état des travaux"
+            data-en="Monitored operations and prepared status reports on completed work">
+            Suivi des opérations réalisées et rédaction de rapports d’état des travaux
+        </li>
+    </ul>
+</div>
             
             <div class="experience-item">
                 <h3 data-fr="Stage - AGETIC (Division infrastructure et équipements)" data-en="Internship - AGETIC (Infrastructure and Equipment Division)">Stage - AGETIC (Division infrastructure et équipements)</h3>
@@ -309,34 +379,122 @@
             </div>
         </section>
         
-        <section id="education">
-            <h2 data-fr="Formation" data-en="Education">Formation</h2>
-            
-            <div class="education-item">
-                <h3 data-fr="Master en Ingénierie Logicielle et Systèmes d'Information Informatisés" data-en="Master's Degree in Software Engineering and Computerized Information Systems">Master en Ingénierie Logicielle et Systèmes d'Information Informatisés</h3>
-                <p class="date">Septembre 2023 - Présent</p>
-                <p data-fr="Faculté des Sciences et Techniques de Bamako" data-en="Faculty of Science and Technology of Bamako">Faculté des Sciences et Techniques de Bamako</p>
-            </div>
-            
-            <div class="education-item">
-                <h3 data-fr="Formation en Gouvernance de l'Internet" data-en="Training on Internet Governance">Formation en Gouvernance de l'Internet</h3>
-                <p class="date">Décembre 2023</p>
-                <p data-fr="ISOC (Internet Society) et MaliSIG (Malian School of Internet Governance)" data-en="ISOC (Internet Society) and MaliSIG (Malian School of Internet Governance)">ISOC (Internet Society) et MaliSIG (Malian School of Internet Governance)</p>
-            </div>
-            
-            <div class="education-item">
-                <h3 data-fr="Formation en Ingénierie Informatique" data-en="Training in Computer Engineering">Formation en Ingénierie Informatique</h3>
-                <p class="date">2020 - 2024</p>
-                <p data-fr="Expert-Lab Technologie, Bamako" data-en="Expert-Lab Technology, Bamako">Expert-Lab Technologie, Bamako</p>
-            </div>
-            
-            <div class="education-item">
-                <h3 data-fr="Licence en Maintenance Informatique et Réseaux" data-en="Bachelor's degree in Computer Maintenance and Networks">Licence en Maintenance Informatique et Réseaux</h3>
-                <p class="date">2018 - 2022</p>
-                <p data-fr="Faculté des Sciences et Techniques de Bamako" data-en="Faculty of Science and Technology of Bamako">Faculté des Sciences et Techniques de Bamako</p>
-            </div>
-        </section>
-        
+     <section id="education">
+    <h2 data-fr="Formation" data-en="Education">Formation</h2>
+    
+    <div class="education-item">
+        <h3 data-fr="Master en Ingénierie Logicielle et Systèmes d'Information" 
+            data-en="Master’s Degree in Software Engineering & Information Systems">
+            Master en Ingénierie Logicielle et Systèmes d'Information
+        </h3>
+        <p class="date" 
+           data-fr="Novembre 2023 – Présent" 
+           data-en="November 2023 – Present">
+           Novembre 2023 – Présent
+        </p>
+        <p data-fr="Faculté des Sciences et Techniques de Bamako" 
+           data-en="Faculty of Science and Technology, Bamako">
+           Faculté des Sciences et Techniques de Bamako
+        </p>
+    </div>
+
+    <div class="education-item">
+        <h3 data-fr="Licence en Réseaux et Maintenance Informatique" 
+            data-en="Bachelor’s Degree in Networks & Computer Maintenance">
+            Licence en Réseaux et Maintenance Informatique
+        </h3>
+        <p class="date" 
+           data-fr="2018 – 2022" 
+           data-en="2018 – 2022">
+           2018 – 2022
+        </p>
+        <p data-fr="Faculté des Sciences et Techniques de Bamako" 
+           data-en="Faculty of Science and Technology, Bamako">
+           Faculté des Sciences et Techniques de Bamako
+        </p>
+    </div>
+
+    <div class="education-item">
+        <h3 data-fr="Diplôme en Réseaux, Cybersécurité et Ingénierie Informatique" 
+            data-en="Networks, Cybersecurity & Computer Engineering Diploma">
+            Diplôme en Réseaux, Cybersécurité et Ingénierie Informatique
+        </h3>
+        <p class="date" 
+           data-fr="2020 – 2024" 
+           data-en="2020 – 2024">
+           2020 – 2024
+        </p>
+        <p data-fr="Expert-Lab Technology, Bamako" 
+           data-en="Expert-Lab Technology, Bamako">
+           Expert-Lab Technology, Bamako
+        </p>
+    </div>
+
+    <div class="education-item">
+        <h3 data-fr="African Girls Can Code Initiative (AGCCI) – ONU Femmes" 
+            data-en="African Girls Can Code Initiative (AGCCI) – UN Women">
+            African Girls Can Code Initiative (AGCCI) – ONU Femmes
+        </h3>
+        <p class="date" 
+           data-fr="Novembre 2025" 
+           data-en="November 2025">
+           Novembre 2025
+        </p>
+        <p data-fr="Formation en programmation, robotique et technologies numériques" 
+           data-en="Training in programming, robotics and digital technologies">
+           Formation en programmation, robotique et technologies numériques
+        </p>
+    </div>
+
+    <div class="education-item">
+        <h3 data-fr="Certificat en Transformation Digitale Inclusive pour les ODD & SAMOA Pathway" 
+            data-en="Certificate in Inclusive Digital Transformation for SDGs & SAMOA Pathway">
+            Certificat en Transformation Digitale Inclusive pour les ODD & SAMOA Pathway
+        </h3>
+        <p class="date" 
+           data-fr="Août 2025" 
+           data-en="August 2025">
+           Août 2025
+        </p>
+        <p data-fr="ITU Academy (Genève, Suisse – en ligne)" 
+           data-en="ITU Academy (Geneva, Switzerland – Online)">
+           ITU Academy (Genève, Suisse – en ligne)
+        </p>
+    </div>
+
+    <div class="education-item">
+        <h3 data-fr="Formation en Gouvernance de l'Internet" 
+            data-en="Internet Governance Training">
+            Formation en Gouvernance de l'Internet
+        </h3>
+        <p class="date" 
+           data-fr="Décembre 2023" 
+           data-en="December 2023">
+           Décembre 2023
+        </p>
+        <p data-fr="ISOC (Internet Society) et MaliSIG" 
+           data-en="ISOC (Internet Society) & MaliSIG">
+           ISOC (Internet Society) et MaliSIG
+        </p>
+    </div>
+
+    <div class="education-item">
+        <h3 data-fr="Baccalauréat Scientifique (Mathématiques & Sciences)" 
+            data-en="Scientific Baccalaureate (Mathematics & Sciences)">
+            Baccalauréat Scientifique (Mathématiques & Sciences)
+        </h3>
+        <p class="date" 
+           data-fr="2015 – 2018" 
+           data-en="2015 – 2018">
+           2015 – 2018
+        </p>
+        <p data-fr="Lycée Danzié Koné, Koutiala" 
+           data-en="Danzié Koné High School, Koutiala">
+           Lycée Danzié Koné, Koutiala
+        </p>
+    </div>
+
+</section>
         <section id="skills">
             <h2 data-fr="Compétences Techniques" data-en="Technical Skills">Compétences Techniques</h2>
             
@@ -533,6 +691,45 @@
                            Lien vers l'application sur Play Store
                         </a>
                    
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3 data-fr="Système de détection d’attaques réseau (APT – REGIN)" 
+                    data-en="Network Attack Detection System (APT – REGIN)">
+                    Système de détection d’attaques réseau (APT – REGIN)
+                </h3>
+                <p class="date" data-fr="2026" data-en="2026">2026</p>
+                <ul>
+                    <li data-fr="Conception d’un système de détection d’attaques basé sur le réseau simulant les comportements des APT (cas REGIN)" 
+                        data-en="Designed a network-based attack detection system simulating APT behaviors (REGIN)">
+                        Conception d’un système de détection d’attaques basé sur le réseau simulant les comportements des APT (cas REGIN)
+                    </li>
+            
+                    <li data-fr="Utilisation de l’analyse de données et de la modélisation de systèmes pour détecter les activités malveillantes" 
+                        data-en="Used data analysis and system modeling to detect malicious activities">
+                        Utilisation de l’analyse de données et de la modélisation de systèmes pour détecter les activités malveillantes
+                    </li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3 data-fr="Projets GitHub" data-en="GitHub Projects">
+                    Projets GitHub
+                </h3>
+                <ul>
+                    <li data-fr="Code source et projets académiques disponibles sur GitHub (Traoré Haoua)" 
+                        data-en="Source code and academic projects available on GitHub (Traore Haoua)">
+                        Code source et projets académiques disponibles sur GitHub (Traoré Haoua)
+                    </li>
+            
+                    <li>
+                        <a href="https://github.com/MissTraore24" 
+                           target="_blank"
+                           data-fr="Voir le profil GitHub" 
+                           data-en="View GitHub profile">
+                            Traoré Haoua
+                        </a>
+                    </li>
                 </ul>
             </div>
         </section>
